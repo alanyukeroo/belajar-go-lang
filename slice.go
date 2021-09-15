@@ -28,5 +28,9 @@ func main() {
 
 	slice1[0] = "eh mei ilang lurs"
 
+	slice1 = append(slice1, "Last Month")
+
 	fmt.Println(months)
+	fmt.Println(slice1)
+
 }

@@ -6,7 +6,7 @@ type BlackList func(string) bool
 
 func registerUser(name string, blacklist BlackList) {
 	if blacklist(name) {
-		fmt.Println("You are blocked", name)
+		fmt.Println("You are blocked!", name)
 	} else {
 		fmt.Println("Welcome!", name)
 	}
@@ -14,8 +14,8 @@ func registerUser(name string, blacklist BlackList) {
 
 func main() {
 	blacklist := func(name string) bool {
-		return name == "admin"
+		return name == "admin" || name == "alan" || name == "root"
 	}
 
-	registerUser("Alan", blacklist)
+	registerUser("momo", blacklist)
 }
